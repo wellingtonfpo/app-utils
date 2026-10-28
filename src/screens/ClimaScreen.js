@@ -36,7 +36,7 @@ export function ClimaScreen() {
             </Card>
 
             <Card titulo={"Próximos dias"} cor={'#2F80ED'}>
-
+                
             </Card>
         </Tela>
     );
