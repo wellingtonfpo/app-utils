@@ -2,6 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { HomeScreen } from './src/screens/HomeScreen';
 import { ImcScreen } from './src/screens/ImcScreen';
+import { ClimaScreen } from './src/screens/ClimaScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +26,11 @@ export default function App() {
           name='Imc'
           component={ImcScreen}
           options={{ title: 'Calculadora de IMC' }}
+        />
+        <Stack.Screen 
+          name='Clima'
+          component={ClimaScreen}
+          options={{ title: 'Previsão do Tempo' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

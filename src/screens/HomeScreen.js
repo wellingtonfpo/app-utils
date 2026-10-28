@@ -1,16 +1,17 @@
 import { View, Text, StyleSheet } from "react-native";
 import { BotaoMenu } from "../components/BotaoMenu";
+import { Tela } from "../components/Tela";
 
 const itensMenu = [
     { titulo: 'Calcular IMC', tela: 'Imc', imagem: require('../../assets/images/imc.png'), cor: '#2E9E6B' },
-    { titulo: 'Previsão Tempo', tela: '', imagem: require('../../assets/images/clima.png'), cor: '#2F80ED' },
+    { titulo: 'Previsão Tempo', tela: 'Clima', imagem: require('../../assets/images/clima.png'), cor: '#2F80ED' },
     { titulo: 'Cotação do Dolar', tela: '', imagem: require('../../assets/images/dolar.png'), cor: '#E0A100' },
     { titulo: 'Consulta CEP', tela: '', imagem: require('../../assets/images/cep.png'), cor: '#E84848' },
 ]
 
 export function HomeScreen({ navigation }) {
     return (
-        <View style={styles.tela}>
+        <Tela>
             <Text style={styles.titulo}>Olá! 👋</Text>
             <Text style={styles.subtitulo}>Escolha uma das funcionalidades abaixo:</Text>
 
@@ -25,7 +26,7 @@ export function HomeScreen({ navigation }) {
                     />
                 ))}
             </View>
-        </View>
+        </Tela>
     );
 }
 
@@ -40,11 +41,6 @@ const styles = StyleSheet.create({
         color: '#667085',
         marginTop: 4,
         marginBottom: 24
-    },
-    tela: {
-        flex: 1,
-        backgroundColor: '#F2F4F7',
-        padding: 20
     },
     grade: {
         flexDirection: 'row',

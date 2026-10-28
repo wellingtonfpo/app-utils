@@ -2,10 +2,11 @@ import { View, TextInput, Text, StyleSheet } from "react-native";
 import { Campo } from "../components/Campo";
 import { Botao } from "../components/Botao";
 import { Card } from "../components/Card";
+import { Tela } from "../components/Tela";
 
 export function ImcScreen() {
     return (
-        <View style={styles.tela}>
+        <Tela>
             <Campo 
                 label='Peso (kg)'
                 placeholder='Ex.: 70,5'
@@ -19,19 +20,43 @@ export function ImcScreen() {
             <Botao titulo={'Calcular'} cor={'#2E9E6B'}/>
             <Botao titulo={'Limpar'} cor={'#667085'}/>
 
-            <Card cor={'#2E9E6B'}>
-                <Text>Seu IMC</Text>
-                <Text>23,02</Text>
-                <Text>Peso Normal</Text>
+            <Card titulo={'Seu IMC'} cor={'#2E9E6B'}>
+                <Text style={styles.valor}>23,02</Text>
+                <Text 
+                    style={styles.classificacao}
+                >
+                    Peso Normal
+                </Text>
             </Card>
-        </View>
+
+            <Card titulo={"Tabela de Referência (OMS)"}>
+                <Text style={styles.tabela}>Menor que 18,5 - Abaixo do peso</Text>
+                <Text style={styles.tabela}>18,5 a 24,9 - Peso Normal</Text>
+                <Text style={styles.tabela}>25 a 29,9 - Sobrepeso</Text>
+                <Text style={styles.tabela}>30 a 34,9 - Obesidade grau I</Text>
+                <Text style={styles.tabela}>35 a 39,9 - Obesidade grau II</Text>
+                <Text style={styles.tabela}>40 ou mais - Obesidade grau III</Text>
+            </Card>
+        </Tela>
     )
 }
 
 const styles = StyleSheet.create({
-    tela: {
-        flex: 1,
-        backgroundColor: '#F2F4F7',
-        padding: 20
+    valor: {
+        fontSize: 48,
+        fontWeight: 'bold',
+        color: '#1D2939',
+        textAlign: 'center'
     },
+    classificacao: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        marginTop: 4
+    },
+    tabela: {
+        fontSize: 14,
+        color: '#667085',
+        marginBottom: 4
+    }
 })
