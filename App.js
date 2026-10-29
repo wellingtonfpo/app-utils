@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { HomeScreen } from './src/screens/HomeScreen';
 import { ImcScreen } from './src/screens/ImcScreen';
 import { ClimaScreen } from './src/screens/ClimaScreen';
+import { CepScreen } from './src/screens/CepScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +32,11 @@ export default function App() {
           name='Clima'
           component={ClimaScreen}
           options={{ title: 'Previsão do Tempo' }}
+        />
+        <Stack.Screen 
+          name='Cep'
+          component={CepScreen}
+          options={{ title: 'CEP' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

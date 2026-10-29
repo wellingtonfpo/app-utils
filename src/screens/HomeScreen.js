@@ -6,7 +6,7 @@ const itensMenu = [
     { titulo: 'Calcular IMC', tela: 'Imc', imagem: require('../../assets/images/imc.png'), cor: '#2E9E6B' },
     { titulo: 'Previsão Tempo', tela: 'Clima', imagem: require('../../assets/images/clima.png'), cor: '#2F80ED' },
     { titulo: 'Cotação do Dolar', tela: '', imagem: require('../../assets/images/dolar.png'), cor: '#E0A100' },
-    { titulo: 'Consulta CEP', tela: '', imagem: require('../../assets/images/cep.png'), cor: '#E84848' },
+    { titulo: 'Consulta CEP', tela: 'Cep', imagem: require('../../assets/images/cep.png'), cor: '#E84848' },
 ]
 
 export function HomeScreen({ navigation }) {

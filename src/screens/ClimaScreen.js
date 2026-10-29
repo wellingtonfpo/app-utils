@@ -36,7 +36,18 @@ export function ClimaScreen() {
             </Card>
 
             <Card titulo={"Próximos dias"} cor={'#2F80ED'}>
-                
+                <View style={styles.dia}>
+                    <Text style={styles.diaNome}>Ter, 06/10</Text>
+                    <Text style={styles.diaIcone}>{descreverTempo(1).icone}</Text>
+                    <Text style={styles.diaChuva}>💧 5%</Text>
+                    <Text style={styles.diaTemp}>25º/31º</Text>
+                </View>
+                <View style={styles.dia}>
+                    <Text style={styles.diaNome}>Ter, 06/10</Text>
+                    <Text style={styles.diaIcone}>{descreverTempo(1).icone}</Text>
+                    <Text style={styles.diaChuva}>💧 5%</Text>
+                    <Text style={styles.diaTemp}>25º/31º</Text>
+                </View>
             </Card>
         </Tela>
     );
@@ -60,5 +71,34 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         marginBottom: 12
+    },
+    dia: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingVertical: 8,
+        borderBottomWidth: 1,
+        borderBottomColor: '#F2F4F7'
+    },
+    diaNome: {
+        width: 90,
+        fontSize: 15,
+        color: '#1D2939'
+    },
+    diaIcone: {
+        fontSize: 22
+    },
+    diaChuva: {
+        width: 60,
+        fontSize: 14,
+        color: '#2F80ED',
+        alignItems: 'center'
+    },
+    diaTemp: {
+        width: 80,
+        fontSize: 15,
+        fontWeight: 'bold',
+        color: '#1D2939',
+        textAlign: 'right'
     }
 })
